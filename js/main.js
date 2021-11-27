@@ -1,7 +1,7 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 0, lng: 0},
-    zoom: 3,
+    zoom: 1,
     streetViewControl: false,
     mapTypeControlOptions: {
       mapTypeIds: ['mandelbrot 1']
@@ -13,7 +13,7 @@ function initMap() {
       var type = '1';
       var normalizedCoord = getNormalizedCoord(coord, zoom);
       if (!normalizedCoord) {
-        return null;
+        return `img/mandelbrot/default.jpg`;
       }
       var bound = Math.pow(2, zoom);
       var id = normalizedCoord.x + normalizedCoord.y * bound + 1;
@@ -33,27 +33,36 @@ function initMap() {
   var markerArr = [];
   var infoWindowArr = [];
 
-  Object.keys(spotLi).forEach(function(key) {
+  Object.keys(spotLi.sheet).forEach(key => {
     var marker;
     var infoWindow;
-    var spot = spotLi[key];
+    var spot = spotLi.sheet[key];
+
+    var { x, y, title } = spot;
+
+    const lng = x * 0.083 - 166;
+    const lat = - y * 0.0405 + 84;
 
     marker = new google.maps.Marker({
-      position: {lat: spot.lat, lng: spot.lng},
-      map: map,
-      title: spot.title,
+      position: { lat, lng },
+      map,
+      title,
     });
 
     markerArr.push(marker);
 
     infoWindow = new google.maps.InfoWindow({
-      content: spot.title,
+      content: `<h2>${spot.title}</h2><p><a href="${spot['youtube-url']}" target="_blank">YouTube</a></p>`,
     });
 
     infoWindowArr.push(infoWindow);
 
     infoWindowArr.forEach(function(iw, i) {
       google.maps.event.addListener(markerArr[i], 'click', function(evt) {
+        infoWindowArr.forEach(function(iw, i) {
+          iw.close();
+        })
+
         iw.open(map, markerArr[i]);
       })
     });
@@ -76,7 +85,7 @@ function getNormalizedCoord(coord, zoom) {
 
   // don't repeat across y-axis (vertically)
   if (y < 0 || y >= tileRange) {
-    y = (y % tileRange + tileRange) % tileRange;
+    return null;
   }
 
   // repeat across x-axis
