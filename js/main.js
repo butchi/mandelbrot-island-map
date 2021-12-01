@@ -40,8 +40,8 @@ function initMap() {
 
     var { x, y, title } = spot;
 
-    const lng = x * 0.083 - 166;
-    const lat = - y * 0.0405 + 84;
+    const lng = x * 0.087890625 - 180;
+    const lat = 180/Math.PI*(Math.asin(Math.tanh(-Math.PI/2048*y+Math.atanh(Math.sin(Math.PI/180*85.05112878)))));
 
     marker = new google.maps.Marker({
       position: { lat, lng },
