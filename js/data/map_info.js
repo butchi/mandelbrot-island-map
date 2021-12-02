@@ -6,7 +6,7 @@ var spotLi = {
       "y": -32.07668749293651,
       "re": 0.441544766781024,
       "im": -0.376631785038623,
-      "youtube-url": "https://youtu.be/Qf1Q_HgTWdM"
+      "youtubeId": "Qf1Q_HgTWdM"
     },
     "2": {
       "title": "イソギンチャクの群体",
@@ -14,7 +14,7 @@ var spotLi = {
       "y": 39.40457432667558,
       "re": -0.649797704293039,
       "im": 0.477084285661745,
-      "youtube-url": "https://youtu.be/j03p-irxLt4"
+      "youtubeId": "j03p-irxLt4"
     },
     "3": {
       "title": "1兆x1兆倍の彼方",
@@ -22,7 +22,7 @@ var spotLi = {
       "y": -4.128951758477642,
       "re": -1.26222162762384,
       "im": -0.0459170016351388,
-      "youtube-url": "https://youtu.be/gva-evKs_8A"
+      "youtubeId": "gva-evKs_8A"
     },
     "4": {
       "title": "龍の巣",
@@ -30,7 +30,7 @@ var spotLi = {
       "y": -21.201185290199245,
       "re": -0.928145299908501,
       "im": -0.241136170655592,
-      "youtube-url": "https://youtu.be/fNJ1JWY_GaU"
+      "youtubeId": "fNJ1JWY_GaU"
     },
     "5": {
       "title": "海藻",
@@ -38,7 +38,7 @@ var spotLi = {
       "y": -47.18878046074318,
       "re": 0.373888457620489,
       "im": -0.596176168021392,
-      "youtube-url": "https://youtu.be/zltFe4bz2fw"
+      "youtubeId": "zltFe4bz2fw"
     },
     "6": {
       "title": "火の粉",
@@ -46,7 +46,7 @@ var spotLi = {
       "y": -42.492436043338856,
       "re": 0.235458712159898,
       "im": -0.52252323018718,
-      "youtube-url": "https://youtu.be/VICWRxanLKM"
+      "youtubeId": "VICWRxanLKM"
     },
     "7": {
       "title": "ニードル",
@@ -54,7 +54,7 @@ var spotLi = {
       "y": 66.29153824071244,
       "re": -0.0282250251091347,
       "im": 0.993845785431388,
-      "youtube-url": "https://youtu.be/-bj4oMeNMkY"
+      "youtubeId": "-bj4oMeNMkY"
     },
     "8": {
       "title": "レインボーサイクロン",
@@ -62,7 +62,7 @@ var spotLi = {
       "y": 30.66595148706122,
       "re": 0.360499920380204,
       "im": 0.358272305109354,
-      "youtube-url": "https://youtu.be/BPd7Ud4CnP4"
+      "youtubeId": "BPd7Ud4CnP4"
     },
     "9": {
       "title": "パセリ",
@@ -70,7 +70,7 @@ var spotLi = {
       "y": 2.2423419393066827e-9,
       "re": -1.9399135918605,
       "im": 0,
-      "youtube-url": "https://youtu.be/3kDde-t6w0I"
+      "youtubeId": "3kDde-t6w0I"
     },
     "10": {
       "title": "霜雪",
@@ -78,7 +78,7 @@ var spotLi = {
       "y": 32.57127366860311,
       "re": -1.25902049465916,
       "im": 0.383134962304845,
-      "youtube-url": "https://youtu.be/vjyJatMiBbs"
+      "youtubeId": "vjyJatMiBbs"
     },
     "11": {
       "title": "バンザイ",
@@ -86,7 +86,7 @@ var spotLi = {
       "y": -50.121779674386445,
       "re": -0.370434491138992,
       "im": -0.645528635289903,
-      "youtube-url": "https://youtu.be/klvHhFakOkc"
+      "youtubeId": "klvHhFakOkc"
     },
     "12": {
       "title": "宇宙の泡構造",
@@ -94,7 +94,7 @@ var spotLi = {
       "y": 2.2694553322940845,
       "re": -0.750810235588225,
       "im": 0.0252227665713417,
-      "youtube-url": "https://youtu.be/91Gi7IslKQE"
+      "youtubeId": "91Gi7IslKQE"
     },
     "13": {
       "title": "峡谷に潜む蝶",
@@ -102,7 +102,7 @@ var spotLi = {
       "y": -67.60148774815717,
       "re": -0.154687419237845,
       "im": -1.03102447707107,
-      "youtube-url": "https://youtu.be/NrnvfqqDWW8"
+      "youtubeId": "NrnvfqqDWW8"
     }
   }
 }
