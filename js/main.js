@@ -13,11 +13,11 @@ function initMap() {
       var type = '1';
       var normalizedCoord = getNormalizedCoord(coord, zoom);
       if (!normalizedCoord) {
-        return `img/mandelbrot/default.jpg`;
+        return `img/default.png`;
       }
       var bound = Math.pow(2, zoom);
-      var id = normalizedCoord.x + normalizedCoord.y * bound + 1;
-      var ret = `img/mandelbrot/mandelbrot-${type}-zoom-${zoom}-index-${id}.jpg`;
+      var {x, y} = normalizedCoord;
+      var ret = `img/${zoom + 1}/${x + 1}/${y + 1}.png`;
       return ret;
     },
     tileSize: new google.maps.Size(256, 256),
