@@ -21,7 +21,7 @@ function initMap() {
       return ret;
     },
     tileSize: new google.maps.Size(256, 256),
-    maxZoom: 6,
+    maxZoom: 7,
     minZoom: 0,
     radius: 1738000,
     name: 'Mandelbrot 1'
@@ -40,8 +40,8 @@ function initMap() {
 
     var { x, y, title } = spot;
 
-    const lng = x * 0.087890625 - 180;
-    const lat = 180/Math.PI*(Math.asin(Math.tanh(-Math.PI/2048*y+Math.atanh(Math.sin(Math.PI/180*85.05112878)))));
+    const lng = x;
+    const lat = y;
 
     marker = new google.maps.Marker({
       position: { lat, lng },
