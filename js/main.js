@@ -43,9 +43,17 @@ function initMap() {
     const lng = x;
     const lat = y;
 
+    icon = {
+      url: "/img/marker.png",
+      size: new google.maps.Size(29, 32),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(16, 32),
+      }
+
     marker = new google.maps.Marker({
       position: { lat, lng },
       map,
+      icon,
       title,
     });
 
