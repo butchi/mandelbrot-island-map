@@ -38,7 +38,7 @@ function initMap() {
     var infoWindow;
     var spot = spotLi.sheet[key];
 
-    var { x, y, title } = spot;
+    var { x, y, title, youtubeId } = spot;
 
     const lng = x;
     const lat = y;
@@ -52,7 +52,10 @@ function initMap() {
     markerArr.push(marker);
 
     infoWindow = new google.maps.InfoWindow({
-      content: `<h2>${spot.title}</h2><p><a href="${spot['youtube-url']}" target="_blank">YouTube</a></p>`,
+      content: `
+<h2>${spot.title}</h2>
+<p><a href="//youtu.be/${spot.youtubeId}" target="_blank"><img src="//img.youtube.com/vi/${youtubeId}/maxresdefault.jpg" width="320"></a></p>
+      `,
     });
 
     infoWindowArr.push(infoWindow);
