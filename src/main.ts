@@ -37,9 +37,10 @@ loader.load().then(async () => {
     <div id="map" class="map"></div>
   `
 
-  const { Map } =
-    (await google.maps.importLibrary('maps')) as google.maps.MapsLibrary
-    const { ImageMapType, Size, Point, Marker, InfoWindow } = google.maps
+  const { Map } = (await google.maps.importLibrary(
+    'maps'
+  )) as google.maps.MapsLibrary
+  const { ImageMapType, Size, Point, Marker, InfoWindow } = google.maps
   const map = new Map(document.getElementById('map') as HTMLElement, {
     center: { lat: 0, lng: 0 },
     zoom: 1,
