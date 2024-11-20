@@ -1,5 +1,3 @@
-import { Loader } from '@googlemaps/js-api-loader'
-
 import spotArr from './spot-list.json' with { type: 'json' }
 
 import './style.css'
@@ -27,20 +25,15 @@ const getNormalizedCoord = (coord: { x: number; y: number }, zoom: number) => {
   return { x, y }
 }
 
-const loader = new Loader({
-  apiKey: 'AIzaSyBRD8dZTlTZGqeU0i9e18QpH3auqMLouqc',
-  version: 'weekly',
-})
-
-loader.load().then(async () => {
+const handler = async () => {
   document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div id="map" class="map"></div>
   `
 
-  const { Map } = (await google.maps.importLibrary(
-    'maps'
-  )) as google.maps.MapsLibrary
+  const lib = await google.maps.importLibrary('maps')
+  const { Map } = lib as google.maps.MapsLibrary
   const { ImageMapType, Size, Point, Marker, InfoWindow } = google.maps
+
   const map = new Map(document.getElementById('map') as HTMLElement, {
     center: { lat: 0, lng: 0 },
     zoom: 1,
@@ -128,4 +121,6 @@ loader.load().then(async () => {
 
     // console.log(evt.latLng.lat(), evt.latLng.lng())
   })
-})
+}
+
+handler()
