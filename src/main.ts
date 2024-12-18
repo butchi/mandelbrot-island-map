@@ -28,6 +28,7 @@ const getNormalizedCoord = (coord: { x: number; y: number }, zoom: number) => {
 const handler = async () => {
   document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div id="map" class="map"></div>
+    <p style="position: fixed; left: 15px; top: 15px; color: grey;">移行中</p>
   `
 
   const lib = await google.maps.importLibrary('maps')
